@@ -1,0 +1,79 @@
+@import "./resetCSS.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  max-width: 1440px;
+  background-color: #000000;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerText {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin: 10px 10px 0 10px;
+  color: white;
+}
+
+.models {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.6rem;
+  justify-content: center;
+  margin: 1rem 2rem 0 2rem;
+}
+
+.models .modelsElement {
+  overflow: hidden;
+  width: 100%;
+}
+
+.modelsElement:hover img {
+  transform: scale(1.1);
+}
+
+.modelsElement img {
+  width: 100%;
+  transition: transform 0.2s;
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+  .models {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem calc(2rem + 16px) 0 2rem;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  html {
+    font-size: 12px;
+  }
+  .models {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 526px) {
+  html {
+    font-size: 10px;
+  }
+  .models {
+    grid-template-columns: 1fr;
+  }
+}
